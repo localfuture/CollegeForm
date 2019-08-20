@@ -30,32 +30,22 @@
               </ul>
             </div>
           </nav>
-    <!-- form -->
-    <form action="/" method="POST">
-        <div class="container">
-            <div class="form-group col-12">
-                <label>Name</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group col-12">
-                <label>RollNo</label>
-                <input type="text" class="form-control" name="rollNo">
-            </div>
-            <div class="form-group col-12">
-                <label>AdmissionNo</label>
-                <input type="text" class="form-control" name="admissionNo">
-            </div>
-            <div class="form-group col-12">
-                <label>College Name</label>
-                <input type="text" class="form-control" name="collegeName">
-            </div>
-        </div>
-        <button type="reset" class="btn btn-primary">Reset</button>
-        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        
 
+    <!-- display card -->
+    <%for(var i=0;i< data.length;i++){%>
+     
+      <div class="card mx-5 my-5" style="width: 18rem;">
+               <div class="card-body">
+                 <h5 class="card-title"><%=data[i].name%></h5>
+                 <h6 class="card-subtitle mb-2 text-muted"><%=data[i].rollNo%></h6>
+                 <h6 class="card-subtitle mb-2 text-muted"><%=data[i].admissionNo%></h6>
+                 <p class="card-text"><%=data[i].collegeName%></p>
+                 
+               </div>
+             </div>
+             <%}%> 
 
-    </form>
+    
 </body>
 
 </html>
